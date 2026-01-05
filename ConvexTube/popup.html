@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FocusTube</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>ConvexTube</h2>
+
+        <label for="keyword">Filter keyword</label>
+        <input id="keyword" type="text" placeholder="e.g. GOC" />
+
+        <div class="row">
+            <button id="set" class="red">Set Filter</button>
+            <button id="clear" class="gray">Clear Filter</button>
+        </div>
+
+        <hr />
+
+        <label>Tools</label>
+        <div class="row">
+            <button id="startNotes" class="red">Start Notes</button>
+            <button id="startTimer" class="gray">Start Timer</button>
+        </div>
+
+        <div class="row" style="margin-top:6px;">
+            <button id="stopTimer" class="gray">Stop Timer</button>
+        </div>
+
+        <p id="todayTime" class="status"></p>
+        <p id="status" class="status"></p>
+    </div>
+    <h2 style="font-size: 10px;">Made With ❤️ By CodeDev's</h2>
+    <script src="popup.js"></script>
+</body>
+
+</html>

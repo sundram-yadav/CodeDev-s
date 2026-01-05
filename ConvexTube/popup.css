@@ -1,0 +1,128 @@
+/* ---------- GLOBAL ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    width: 280px;
+    transition: background 0.3s, color 0.3s;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.container {
+    padding: 12px;
+    border-radius: 12px;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    text-align: center;
+    color: var(--accent);
+}
+
+label {
+    font-size: 13px;
+    color: var(--text);
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--input-bg);
+    color: var(--text);
+    font-size: 13px;
+}
+
+/* ---------- BUTTONS ---------- */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+button {
+    flex: 1;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 9px;
+    font-size: 13px;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+/* 🔴 Red buttons (Set Filter / Start Notes / Add Note) */
+button.red {
+    background: #ff0000;
+    color: #fff;
+    border: 1px solid #d00000;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.35);
+}
+
+button.red:hover {
+    background: #e00000;
+    transform: translateY(-1px);
+}
+
+/* ⚫ Gray buttons (Clear Filter / Start Timer / Export All) */
+button.gray {
+    background: #e0e0e0;
+    color: #000;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button.gray:hover {
+    background: #d3d3d3;
+    transform: translateY(-1px);
+}
+
+/* ---------- SEPARATOR ---------- */
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 12px 0;
+}
+
+/* ---------- TEXT ---------- */
+.status {
+    font-size: 12px;
+    text-align: center;
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+/* ---------- THEMES ---------- */
+body.light {
+    --accent: #ff0000;
+    --bg: #ffffff;
+    --text: #000;
+    --muted: #555;
+    --border: #ddd;
+    --input-bg: #ffffff;
+}
+
+body.dark {
+    --accent: #ff0000;
+    --bg: #0f0f0f;
+    --text: #ffffff;
+    --muted: #ccc;
+    --border: #333;
+    --input-bg: #181818;
+}
+
+/* ---------- SMALL POLISH ---------- */
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+}
